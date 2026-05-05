@@ -7,8 +7,12 @@ async function bootstrap() {
 
   // CORS — permite que Angular (localhost:4200) llame a la API
   app.enableCors({
-    origin: ['http://localhost:4200', 'https://tienda-virtual-orcin.vercel.app'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    origin: [
+  	'http://localhost:4200',
+  	'https://tienda-virtual-orcin.vercel.app',
+    ],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
     credentials: true,
   });
 
