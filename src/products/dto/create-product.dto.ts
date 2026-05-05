@@ -21,4 +21,8 @@ export class CreateProductDto {
 
   @IsString()
   categoryId: string;
+
+  @IsString()
+  @IsOptional()
+  sellerId: string;
 }

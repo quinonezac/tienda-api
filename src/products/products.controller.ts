@@ -22,7 +22,7 @@ export class ProductsController {
   @Post()
   create(@Body() dto: CreateProductDto) {
     // sellerId vendrá del JWT en la Fase 3 — por ahora lo dejamos fijo para probar
-    return this.productsService.create(dto, 'seller-id-temporal');
+    return this.productsService.create(dto, dto.sellerId || 'fallback');
   }
 
   @Put(':id')
