@@ -19,7 +19,7 @@ async function bootstrap() {
     app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
     app.setGlobalPrefix('api');
 
-    const port = process.env.PORT || 3000;
+    const port = process.env.PORT || 8080;
     await app.listen(port, '0.0.0.0');
     console.log(`API corriendo en puerto ${port}`);
     console.log(`DATABASE_URL exists: ${!!process.env.DATABASE_URL}`);
